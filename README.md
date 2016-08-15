@@ -1,1 +1,1 @@
-# PedidoVenda
+# Sistema comercial (em desenvolvimento)
