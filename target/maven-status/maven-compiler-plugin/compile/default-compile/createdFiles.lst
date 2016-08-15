@@ -1,0 +1,8 @@
+pedidovenda\controller\CadastroProdutoBean.class
+pedidovenda\jsf\JsfExceptionHandlerFactory.class
+pedidovenda\controller\CadastroPedidoBean.class
+pedidovenda\controller\PesquisaPedidosBean.class
+pedidovenda\cdi\ViewScopedContext.class
+pedidovenda\jsf\JsfExceptionHandler.class
+pedidovenda\cdi\ViewContextExtension.class
+pedidovenda\controller\PesquisaProdutosBean.class

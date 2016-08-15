@@ -1,0 +1,56 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="titulo">Novo produto</ui:define>
+
+	<ui:define name="corpo">
+		<h:form>
+			<h1>Novo Produto</h1>
+
+			<p:toolbar style="margin-top: 20px">
+				<p:toolbarGroup align="left">
+					<p:button value="Novo" outcome="/produtos/CadastroProdutos" />
+					<p:commandButton value="Salvar" id="botaoSalvar"
+						action="#{cadastroProdutoBean.salvar}" />
+				</p:toolbarGroup>
+
+				<p:toolbarGroup align="right">
+					<p:button value="Pesquisa" outcome="/produtos/PesquisaProdutos" />
+				</p:toolbarGroup>
+			</p:toolbar>
+
+			<!-- columnClasses = label->rotulo e campo->inputText -->
+			<p:panelGrid columns="2" id="painel"
+				style="width: 100%; margin-top:20px" columnClasses="rotulo, campo">
+				<p:outputLabel value="SKU" for="sku" />
+				<p:inputText id="sku" size="25" maxlength="30" />
+
+				<p:outputLabel value="Nome" for="nome" />
+				<p:inputText id="nome" size="70" maxlength="80" />
+
+				<p:outputLabel value="Categoria" for="categoria" />
+				<p:selectOneMenu id="categoria">
+					<f:selectItem itemLabel="Selecione a categoria" />
+				</p:selectOneMenu>
+
+				<p:outputLabel value="Subcategoria" for="subcategoria" />
+				<p:selectOneMenu id="subcategoria">
+					<f:selectItem itemLabel="Selecione a subcategoria" />
+				</p:selectOneMenu>
+
+				<p:outputLabel value="Valor Unitário" for="valorUnitario" />
+				<p:inputText id="valorUnitario" size="10" maxlength="10"
+					styleClass="moeda" />
+
+				<p:outputLabel value="Estoque" for="estoque" />
+				<p:inputText id="estoque" size="10" maxlength="4" />
+
+			</p:panelGrid>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

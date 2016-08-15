@@ -1,0 +1,14 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:panelGroup style="padding-right: 10px" layout="block">
+		<p:inputTextarea rows="8" style="width:500px" maxlength="300"
+			autoResize="false" counter="display"
+			counterTemplate="{0} caracters restantes" />
+		<br />
+		<h:outputText id="display" />
+	</h:panelGroup>
+</ui:composition>
